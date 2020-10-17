@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="logo-center">
+            <img class="logo-img" src="./assets/title.png">
+        </div>
+
+        <div class="abs-center">
+
+            <form class="border p-3 form">
+
+                <div class="logo-center">
+                    <img class="icon-avatar" src="./assets/icon-avatar.png">
+                </div>
+
+                <div class="form-group row">
+                    <img for="inputUser" class="col-sm-2 icon-img" src="./assets/icon-user.png">
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputUser" placeholder="name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <!----<label for="staticEmail" class="col-sm-2 col-form-label">Email</label>-->
+                    <img for="staticEmail" class="col-sm-2 icon-img" src="./assets/icon-mail.png">
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" placeholder="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <!--  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
+                    <img for="inputPassword" class="col-sm-2 icon-img" src="./assets/icon-padlock.png">
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <!--  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
+                    <img for="inputPassword" class="col-sm-2 icon-img" src="./assets/icon-padlock.png">
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="repeat password">
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <img class="col-sm-2 icon-img" src="./assets/icon-calendar.png">
+                    <div class="col-sm-6">
+                        <input type="date" id="date" name="trip-start" min="1910-01-01" max="2002-31-12">
+                    </div>
+                    <select name="select" id="genders" class="col-sm-4.7">
+                        <option value="0" selected>Gender</option>
+                        <option value="M">F</option>
+                        <option value="M">M</option>
+                      </select>
+                </div>
+                <div class="form-group row">
+                    <img for="inputCiudad" class="col-sm-2 icon-img" src="./assets/icon-location.png">
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputCiudad" placeholder="ciudad">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn" href="/">SIGNIN</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
