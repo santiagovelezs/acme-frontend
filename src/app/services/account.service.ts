@@ -14,8 +14,7 @@ export class AccountService {
     this.user = new User();
    }
   
-  signup(user: User){
-    console.log("heyyyyyyyyyyyyyy");
+  signup(user: User){    
     return this.http.post(this.URL_API, user);
   }
 
