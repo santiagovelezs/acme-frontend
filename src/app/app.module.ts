@@ -10,6 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './components/alert/alert.component';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { SignupComponent } from './components/signup/signup.component';
     HabitacionesComponent,
     HomeComponent,
     LoginComponent,    
-    ReviewsComponent, SignupComponent
+    ReviewsComponent, 
+    SignupComponent, AlertComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

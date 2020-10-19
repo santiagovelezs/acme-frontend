@@ -16,63 +16,79 @@
 
         <div class="abs-center">
 
-            <form class="border p-3 form">
-
+            <!-- Form -->
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            
                 <div class="logo-center">
                     <img class="icon-avatar" src="./assets/icon-avatar.png">
                 </div>
 
+                <!-- Name -->
                 <div class="form-group row">
-                    <img for="inputUser" class="col-sm-2 icon-img" src="./assets/icon-user.png">
+                    <img for="name" class="col-sm-2 icon-img" src="./assets/icon-user.png">
                     <div class="col-sm-10">
-                        <input class="form-control" id="inputUser" placeholder="name">
+                        <input type="text" formControlName="name" placeholder="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.namr.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">First Name is required</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <!----<label for="staticEmail" class="col-sm-2 col-form-label">Email</label>-->
-                    <img for="staticEmail" class="col-sm-2 icon-img" src="./assets/icon-mail.png">
+                <!-- Email -->
+                <div class="form-group row">                    
+                    <img for="email" class="col-sm-2 icon-img" src="./assets/icon-mail.png">
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" placeholder="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" formControlName="email" placeholder="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email Address is required</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <!--  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
-                    <img for="inputPassword" class="col-sm-2 icon-img" src="./assets/icon-padlock.png">
+                <!-- Password -->
+                <div class="form-group row">                    
+                    <img for="password" class="col-sm-2 icon-img" src="./assets/icon-padlock.png">
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+                        <input type="password" formControlName="password" placeholder="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-group row">
-                    <!--  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
-                    <img for="inputPassword" class="col-sm-2 icon-img" src="./assets/icon-padlock.png">
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="repeat password">
-                    </div>
-
-                </div>
-
+              
+                <!-- Gender n Birth_Date -->
                 <div class="form-group row">
                     <img class="col-sm-2 icon-img" src="./assets/icon-calendar.png">
                     <div class="col-sm-6">
-                        <input type="date" id="date" name="trip-start" min="1910-01-01" max="2002-31-12">
+                        <input type="date" formControlName="birth_date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.birth_date.errors }" />
                     </div>
-                    <select name="select" id="genders" class="col-sm-4.7">
+                    <select formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.Gender.errors }"  class="col-sm-4.7">
                         <option value="0" selected>Gender</option>
                         <option value="M">F</option>
                         <option value="M">M</option>
-                      </select>
+                    </select>
                 </div>
+
+                <!-- City -->
                 <div class="form-group row">
                     <img for="inputCiudad" class="col-sm-2 icon-img" src="./assets/icon-location.png">
                     <div class="col-sm-10">
-                        <input class="form-control" id="inputCiudad" placeholder="ciudad">
+                        <input type="text" formControlName="city" placeholder="ciudad" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+                        <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                            <div *ngIf="f.city.errors.required">City is required</div>
+                        </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary login-btn" href="/">SIGNIN</button>
 
+                <!-- Buttons -->
+                <div class="form-group">
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        SIGNUP
+                    </button>
+                    <input type="submit" id="submit"  value="SIGNUP" class="btn btn-primary login-btn" />
+                </div>                
             </form>
         </div>
     </div>
