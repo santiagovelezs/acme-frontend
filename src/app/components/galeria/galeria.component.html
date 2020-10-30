@@ -26,10 +26,12 @@
 
             <li class="nav-item">
 
-                <a class="nav-link" href="/signin"><img src="./assets/icon-user.png" width="20" height="20" alt="">Sign Up</a>
+                <a class="nav-link" href="/signin"><img src="./assets/icon-user.png" width="20" height="20" alt="">Sign
+                    Up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login"><img src="./assets/login-xxl.png" width="20" height="20" alt="">Login</a>
+                <a class="nav-link" href="/login"><img src="./assets/login-xxl.png" width="20" height="20"
+                        alt="">Login</a>
             </li>
         </ul>
     </nav>
@@ -39,7 +41,8 @@
         <img class="card-img-top" src="./assets/gallery1.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
@@ -59,7 +62,18 @@
         <img class="card-img-top" src="./assets/gallery3.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    <div class="card" *ngFor="let photo of photos">
+        <img class="card-img-top" [src]="'http://localhost:5000/' + photo.path" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">{{ photo.title }}</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>

@@ -13,6 +13,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
+import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { AlertComponent } from './components/alert/alert.component';
     HomeComponent,
     LoginComponent,    
     ReviewsComponent, 
-    SignupComponent, AlertComponent,
+    SignupComponent, AlertComponent, UploadPhotoComponent,
   ],
   imports: [
     BrowserModule,

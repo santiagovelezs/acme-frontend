@@ -1,0 +1,24 @@
+<div class="col mx-auto">
+    <div class="card">
+        <div class="card-header">
+            Publica tus mejores momentos en el hotel ACME!
+        </div>
+        <div class="card-body">
+            <form (submit)="uploadPhoto(title)">
+                <div class="form-group">
+                    <textarea rows="3" class="form-control" placeholder="Describe tu foto" required #title></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="file" class="d-none" (change)="onPhotoSelect($event)" #photoInput>
+                    <img [src]="photoSelected || 'assets/select-image.png'" width="250px" class="img-fluid"
+                        alt="Select Image" (click)="photoInput.click()">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
