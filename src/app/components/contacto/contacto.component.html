@@ -9,71 +9,82 @@
 
 <body>
     <header>
-        <nav class="navbar-dark bg-dark">
+        <app-navbar title="contacto">
 
-            <ul class="nav nav-pills nav-justified ">
-                <li>
-                    <a class="navbar-brand" href="#">
-                        <img src="./assets/title.png" width="70" height="40" alt="">
-                    </a>
-                </li>
-                <li class="nav-item">
-
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/habitaciones">Habitaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/galeria">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/contacto">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/reviews">Reseñas</a>
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link" href="/signin"><img src="./assets/icon-user.png" width="20" height="20" alt="">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login"><img src="./assets/login-xxl.png" width="20" height="20" alt="">Login</a>
-                </li>
-            </ul>
-        </nav>
+        </app-navbar>
     </header>
-    <div class="container"><br><br>
-        <strong class="info" style="font-size: larger;">Información de contacto</strong><br><br>
-        <div class="form-group row">
-            <img for="infoLoc" class="icon-img" src="./assets/icon-loca.png" width="50" height="50">
-            <div class="info-item">
-                <label class="form-control" id="infoLoc">CLL 45 A51 - 20</label>
+    <div class="container">
+        <div class="row abs-center">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card card-cascade narrower card1">
+
+                    <strong class="info" style="font-size: larger;">Información de contacto</strong><br><br>
+                    <div class="form-group row">
+                        <img for="infoLoc" class="icon-img" src="./assets/icon-loca.png" width="50" height="50">
+                        <div class="info-item">
+                            <label class="form-control" id="infoLoc">CLL 45 A51 - 20</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <img for="infoMail" class="icon-img" src="./assets/icon-mailc.jpg" width="50" height="50">
+                        <div class="info-item">
+                            <label class="form-control" id="infoMail">hotelacme@reservas.com</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <img for="infoPhone" class="icon-img" src="./assets/icon-phone.png" width="50" height="50">
+                        <div class="info-item">
+                            <label class="form-control" id="infoPhone">888 00 00 </label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <img src="./assets/icon-facebook.png" class="icon-img" width="50" height="50">
+                        <img src="./assets/icon-twitter.png" class="icon-img" width="50" height="50">
+                        <img src="./assets/icon-instagram.png" class="icon-img" width="50" height="50">
+                    </div>
+
+                </div>
+                <!--/.Card-->
+
             </div>
-        </div>
-        <div class="form-group row">
-            <img for="infoMail" class="icon-img" src="./assets/icon-mailc.jpg" width="50" height="50">
-            <div class="info-item">
-                <label class="form-control" id="infoMail">hotelacme@reservas.com</label>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <!--Card card-cascade narrower -->
+                <div class="card card-cascade narrower">
+
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header peach-gradient">
+                        <h5 class="mb-0">Ubicación</h5>
+                    </div>
+                    <!--/Card image-->
+
+                    <!--Card content-->
+                    <div class="card-body card-body-cascade text-center">
+
+                        <!--Google map-->
+                        <div id="map-container-google-9" class="z-depth-1-half map-container-5" style="height: 300px">
+                            <iframe src="https://maps.google.com/maps?q=Madryt&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+
             </div>
-        </div>
-        <div class="form-group row">
-            <img for="infoPhone" class="icon-img" src="./assets/icon-phone.png" width="50" height="50">
-            <div class="info-item">
-                <label class="form-control" id="infoPhone">888 00 00 </label>
-            </div>
-        </div>
-        <div class="form-group row">
-            <img src="./assets/icon-facebook.png" class="icon-img" width="50" height="50">
-            <img src="./assets/icon-twitter.png" class="icon-img" width="50" height="50">
-            <img src="./assets/icon-instagram.png" class="icon-img" width="50" height="50">
-        </div>
-        <div class="text-right" style="justify-content: flex-end;">
-            <img class="img-loc" src="./assets/location.jpg" width="600" height="300" alt="">
+            <!--Grid column-->
+
         </div>
     </div>
-
 </body>
 
 </html>

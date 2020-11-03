@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../../services/photo.service';
 
@@ -11,7 +12,7 @@ export class UploadPhotoComponent implements OnInit {
   file: File;
   photoSelected: string | ArrayBuffer;
 
-  constructor(private photoService: PhotoService) { }
+  constructor(private photoService: PhotoService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +28,10 @@ export class UploadPhotoComponent implements OnInit {
 
   uploadPhoto(title: HTMLInputElement) {
     this.photoService.createPhoto(title.value, this.file)
-      .subscribe(res => console.log(res), err => console.log(err));
+      .subscribe(res => {
+        this.router.navigate(['/galeria']);
+        }, err => console.log(err)
+      )
   }
+  
 }

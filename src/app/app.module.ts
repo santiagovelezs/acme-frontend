@@ -14,6 +14,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
 import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
+import { DetallehabitacionComponent } from './components/detallehabitacion/detallehabitacion.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PerfilusuarioComponent } from './components/perfilusuario/perfilusuario.component';
+import { ReservarComponent } from './components/reservar/reservar.component';
 
 
 @NgModule({
@@ -25,7 +29,7 @@ import { UploadPhotoComponent } from './components/upload-photo/upload-photo.com
     HomeComponent,
     LoginComponent,    
     ReviewsComponent, 
-    SignupComponent, AlertComponent, UploadPhotoComponent,
+    SignupComponent, AlertComponent, UploadPhotoComponent, DetallehabitacionComponent, NavbarComponent, PerfilusuarioComponent, ReservarComponent,
   ],
   imports: [
     BrowserModule,

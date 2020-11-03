@@ -1,82 +1,75 @@
 <header>
-    <nav class="navbar-dark bg-dark">
+    <app-navbar title="galeria">
 
-        <ul class="nav nav-pills nav-justified ">
-            <li>
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/title.png" width="70" height="40" alt="">
-                </a>
-            </li>
-            <li class="nav-item">
-
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/habitaciones">Habitaciones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="/galeria">Galeria</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contacto">Contacto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/reviews">Reseñas</a>
-            </li>
-
-            <li class="nav-item">
-
-                <a class="nav-link" href="/signin"><img src="./assets/icon-user.png" width="20" height="20" alt="">Sign
-                    Up</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login"><img src="./assets/login-xxl.png" width="20" height="20"
-                        alt="">Login</a>
-            </li>
-        </ul>
-    </nav>
+    </app-navbar>
 </header>
+<div class="row mt-4">
+    <div class="col-md-12 text-center">
+        <button type="button" class="btn btn-primary" [routerLink]="['/upload-photo']">Publicar Foto</button>        
+    </div>    
+</div>
 <div class="card-deck">
     <div class="card">
+        <div class="card-header">
+            <img class="card-user-img" src="./assets/user-avatar1.png">
+            <strong class="text-username">username</strong>
+        </div>
         <img class="card-img-top" src="./assets/gallery1.jpg" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">This is description card with supporting text below as a natural lead-in to additional content.</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
         </div>
     </div>
+
     <div class="card">
+        <div class="card-header">
+            <img class="card-user-img" src="./assets/user-avatar2.png">
+            <strong class="text-username">username</strong>
+        </div>
         <img class="card-img-top" src="./assets/gallery2.jpg" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">This description has supporting text below as a natural lead-in to additional content.</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
         </div>
     </div>
+
     <div class="card">
+        <div class="card-header">
+            <img class="card-user-img" src="./assets/user-avatar3.png">
+            <strong class="text-username">username</strong>
+        </div>
         <img class="card-img-top" src="./assets/gallery3.jpg" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">This description has supporting text below as a natural lead-in to additional content.</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
         </div>
     </div>
-    <div class="card" *ngFor="let photo of photos">
-        <img class="card-img-top" [src]="'http://localhost:5000/' + photo.path" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">{{ photo.title }}</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+</div>
+
+<div class="row">
+
+<div class="card" *ngFor="let photo of photos">
+    <div class="card-header">
+        <img class="card-user-img" src="./assets/user-avatar3.png">
+        <strong class="text-username">username</strong>
     </div>
+    <img class="card-img-top" [src]="'http://localhost:5000/' + photo.path" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">{{ photo.title }}</p>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+</div>
+
 </div>
