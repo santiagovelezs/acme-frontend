@@ -18,6 +18,8 @@ import { DetallehabitacionComponent } from './components/detallehabitacion/detal
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PerfilusuarioComponent } from './components/perfilusuario/perfilusuario.component';
 import { ReservarComponent } from './components/reservar/reservar.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { CrearAlbumComponent } from './components/crear-album/crear-album.component';
 
 
 @NgModule({
@@ -29,7 +31,7 @@ import { ReservarComponent } from './components/reservar/reservar.component';
     HomeComponent,
     LoginComponent,    
     ReviewsComponent, 
-    SignupComponent, AlertComponent, UploadPhotoComponent, DetallehabitacionComponent, NavbarComponent, PerfilusuarioComponent, ReservarComponent,
+    SignupComponent, AlertComponent, UploadPhotoComponent, DetallehabitacionComponent, NavbarComponent, PerfilusuarioComponent, ReservarComponent, LogoutComponent, CrearAlbumComponent,
   ],
   imports: [
     BrowserModule,

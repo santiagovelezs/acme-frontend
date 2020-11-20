@@ -10,7 +10,9 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { DetallehabitacionComponent } from './components/detallehabitacion/detallehabitacion.component';
 import { ReservarComponent } from './components/reservar/reservar.component';
 import { PerfilusuarioComponent } from './components/perfilusuario/perfilusuario.component';
-import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component'
+import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { CrearAlbumComponent } from './components/crear-album/crear-album.component'
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path: 'detallehabitacion', component: DetallehabitacionComponent},
   {path: 'reservar', component: ReservarComponent},
   {path: 'perfilusuario', component: PerfilusuarioComponent},
-  {path: 'upload-photo', component: UploadPhotoComponent}
+  {path: 'upload-photo', component: UploadPhotoComponent},
+  {path: 'logout', component: LogoutComponent},
+  {path: 'crear-album', component: CrearAlbumComponent}
 ];
 
 @NgModule({

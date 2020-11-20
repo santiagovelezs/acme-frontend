@@ -11,19 +11,23 @@ export class PhotoService {
 
   constructor(private http: HttpClient) { }
 
-  createPhoto(title: string, photo: File) {
+  createPhoto(title: string, album: string, photo: File) {
     const fd = new FormData();
     fd.append('title', title);
-    /* 
+    /* xxxxxxxx
       TODO: PASAR USUARIO LOGUEADO EN EL SISTEMA
         YA QUE ACA ESTAMOS PASANDO UN USUARIO FIJO   
     */
-    fd.append('user', '5f8da3d291b38b003e7c0e19');
+    // relacionar foto con album    
+    fd.append('token', localStorage.getItem('token'));
+    fd.append('album', album);
     fd.append('image', photo);
+    console.log("ALBUMMMMMM: ",album)
     return this.http.post(this.URL_API, fd);
   }
 
   getPhotos() {
     return this.http.get<Photo[]>(this.URL_API);
   }
+    
 }

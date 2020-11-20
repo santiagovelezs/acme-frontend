@@ -9,6 +9,11 @@
 
 <body>
 
+    <header>
+        <app-navbar title="login">
+
+        </app-navbar>
+    </header>
 
     <div class="container">
 
@@ -16,21 +21,20 @@
             <img class="logo-img" src="./assets/title.png">
         </div>
         <div class="abs-center">
-
-            <form class="border p-3 form">
+            <form class="border p-3 form" [formGroup]="form" (ngSubmit)="onSubmit()">           
                 <h1 class="bienTxt">BIENVENIDO</h1> <br>
                 <div class="form-group row">
                     <!----<label for="staticEmail" class="col-sm-2 col-form-label">Email</label>-->
                     <img for="staticEmail" class="col-sm-2 icon-img" src="./assets/icon-mail.png">
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" placeholder="mail" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" formControlName="email" class="form-control" placeholder="mail" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                 </div>
                 <div class="form-group row">
                     <!--  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
                     <img for="inputPassword" class="col-sm-2 icon-img" src="./assets/icon-padlock.png">
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+                        <input type="password" formControlName="password" class="form-control" id="inputPassword" placeholder="password">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -38,13 +42,13 @@
                     <label routerLink="/forgot-password" class="forgotP">¿Olvidaste tu constraseña?</label>
                     <!--  </div> -->
                 </div>
-                <button type="submit" href="/" class="btn btn-primary login-btn">LOGIN</button>
+                <button type="submit" class="btn btn-primary login-btn">LOGIN</button>
                 <div class="form-group row">
 
                     <label for="itemRegistro" class="col-sm-8 col-form-label noCuenta">¿No tienes una cuenta?</label>
 
                     <div class="col-sm-2" id="itemRegistro">
-                        <label class="lregistrate" routerLink="/signin" routerLinkActive>Registrate</label>
+                        <label class="lregistrate" [routerLink]="['/signup']" routerLinkActive>Registrate</label>
                     </div>
                 </div>
             </form>

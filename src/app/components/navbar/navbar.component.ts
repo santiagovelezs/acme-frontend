@@ -8,9 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NavbarComponent implements OnInit {
   @Input() title: string;
   active = 'active';
+  isLoggedIn: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('token')){
+      this.isLoggedIn = true;
+    }else{
+      this.isLoggedIn = false;
+    }    
   }
 
 }

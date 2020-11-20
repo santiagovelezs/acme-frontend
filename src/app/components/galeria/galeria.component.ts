@@ -14,12 +14,13 @@ export class GaleriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.photoService.getPhotos()
-    .subscribe(
-      res => {
-        this.photos = res
-      },
-      err => console.log(err)
-    )
+        .subscribe(
+          res => {
+            this.photos = res
+            console.log("Fotossssssssss: ",this.photos)
+          },
+          err => console.log(err)
+        )
   }
 
 }

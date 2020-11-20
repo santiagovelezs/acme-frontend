@@ -8,7 +8,7 @@
 
     <div class="row mt-4">
         <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-primary" [routerLink]="['/']">Crear Album</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/crear-album']">Crear Album</button>
         </div>
     </div>
 
@@ -19,7 +19,8 @@
                     Publica tus mejores momentos en el hotel ACME!
                 </div>
                 <div class="card-body">
-                    <form (submit)="uploadPhoto(title)">
+                    <form (submit)="uploadPhoto(title, album)">
+                        <input type="text" class="d-none" value="index" #album>
                         <div class="form-group">
                             <textarea rows="3" class="form-control" placeholder="Describe tu foto" required
                                 #title></textarea>
@@ -45,7 +46,7 @@
                     Mis Álbumes
                 </div>
                 <div class="card-body">
-
+                    <p *ngFor="let album of albums">{{ album.name }}</p>
                 </div>
             </div>
         </div>

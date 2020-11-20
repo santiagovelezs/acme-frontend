@@ -34,12 +34,19 @@
             <ng-template #thenblock4><a class="nav-link active" href="/reviews">Reseñas</a></ng-template>
             <ng-template #elseblock4><a class="nav-link" href="/reviews">Reseñas</a></ng-template>
         </li>
-        <li class="nav-item">
-
+        <li *ngIf="!isLoggedIn"  class="nav-item">
             <a class="nav-link" href="/signup"><img src="./assets/icon-user.png" width="20" height="20" alt="">Sign Up</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/login"><img src="./assets/login-xxl.png" width="20" height="20" alt="">Login</a>
-        </li>
+        <div *ngIf="!isLoggedIn; else loggedOut">
+            <li class="nav-item">
+                <a class="nav-link" href="/login"><img src="./assets/login-xxl.png" width="20" height="20" alt="">Login</a>
+            </li>
+        </div>
+        <ng-template #loggedOut>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout"><img src="./assets/login-xxl.png" width="20" height="20" alt="">LogOut</a>
+            </li>
+        </ng-template>        
     </ul>
 </nav>
+
